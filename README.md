@@ -74,7 +74,7 @@ The trained model was deployed on a production line simulator using Python and O
 | Precision      | 95.55%  |
 | Recall         | 95.65%  |
 | mAP@0.5        | 95.10%  |
-| F1-Score       | 95.30%  |
+| loss           | 0.17    |
 
 ### Example Output
 Below is an short video example of the model's output on a test images:
