@@ -32,38 +32,34 @@ This solution is designed to be fast, accurate, and scalable for industrial appl
 
 ## Dataset
 
-The dataset used in this project was sourced from **Kaggle**. It contains labeled images of objects captured in various conditions on a manufacturing line. Each object is annotated with bounding boxes and classified into one of two categories:
+The dataset used in this project was sourced from **Kaggle**. It contains images of objects captured in various conditions. Each object is annotated with bounding boxes and classified into one of two categories:
 - **Damaged**: Objects with visible defects.
 - **OK**: Objects that meet quality standards.
 
 Key Details:
-- **Dataset Name**: [Insert Kaggle Dataset Name Here](link_to_kaggle_dataset)
-- **Number of Images**: X,XXX
-- **Annotations**: Bounding boxes and labels (Damaged/OK)
-- **Data Augmentation**: Applied to improve model robustness (e.g., rotation, scaling, flipping).
+- **Dataset Name**: [https://www.kaggle.com/datasets/ravirajsinh45/real-life-industrial-dataset-of-casting-product](link_to_kaggle_dataset)
+- **Number of Images**: 700
+- **Annotations**: Bounding boxes and labels (Damaged/OK) or in persian (سالم/خراب)
 
 ---
 
 ## Methodology
 
 ### Model Architecture
-We used **YOLOv11**, an advanced real-time object detection model known for its speed and accuracy. Key features include:
+We used **YOLO11l and YOLO11s**, an advanced real-time object detection model known for its speed and accuracy. Key features include:
 - Single-shot detection for high-speed inference.
 - Support for multiple classes (in this case, "Damaged" and "OK").
-- Efficient handling of small and large objects.
 
 ### Training Process
 1. **Preprocessing**:
-   - Resized images to a fixed resolution (e.g., 640x640).
-   - Normalized pixel values to [0, 1].
+   - Resized images to a fixed resolution (e.g., 512x512).
    - Split data into training (80%), validation (10%), and testing (10%) sets.
 2. **Training**:
-   - Fine-tuned YOLOv11 on the custom dataset.
+   - Fine-tuned YOLO11 on the custom dataset.
    - Used transfer learning to leverage pre-trained weights.
-   - Optimized with **AdamW** optimizer and a learning rate scheduler.
 3. **Evaluation**:
    - Metrics: Precision, Recall, mAP (mean Average Precision), and F1-score.
-   - Achieved **XX% mAP** on the test set.
+   - Achieved **0.95% mAP** on the test set.
 
 ### Deployment
 The trained model was deployed on a production line simulator using Python and OpenCV for real-time inference.
@@ -75,22 +71,22 @@ The trained model was deployed on a production line simulator using Python and O
 ### Performance Metrics
 | Metric         | Value   |
 |----------------|---------|
-| Precision      | XX.XX%  |
-| Recall         | XX.XX%  |
-| mAP@0.5        | XX.XX%  |
-| F1-Score       | XX.XX%  |
+| Precision      | 95.55%  |
+| Recall         | 95.65%  |
+| mAP@0.5        | 95.10%  |
+| F1-Score       | 95.30%  |
 
 ### Example Output
-Below is an example of the model's output on a test image:
+Below is an short video example of the model's output on a test images:
 
-![Example Output](path_to_example_output_image.jpg) <!-- Replace with your actual image -->
+![Example Output](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/VideoRecorder/recorded_fast_yolo11l.avi) <!-- Replace with your actual image -->
 
 ---
 
 ## Usage
 
 ### Prerequisites
-- Python 3.x
+- Python 3.10.16
 - Install dependencies:
   ```bash
   pip install torch torchvision opencv-python ultralytics
