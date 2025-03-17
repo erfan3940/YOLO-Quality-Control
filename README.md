@@ -1,7 +1,7 @@
 # YOLO-Quality-Control
 # Object Detection and Quality Control with YOLOv11
 
-![Project Banner](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/screenshots/screen.png) <!-- Replace with your image/video thumbnail -->
+![Project Banner](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/screenshots/screen.png)
 
 This project focuses on implementing **YOLOv11** (You Only Look Once version 11) for real-time object detection in manufacturing lines. The goal is to identify objects, classify them as either **damaged** or **OK**, and count them efficiently. This system can be integrated into production lines to automate quality control processes.
 
@@ -79,7 +79,7 @@ The trained model was deployed on a production line simulator using Python and O
 ### Example Output
 Below is an short video example of the model's output on a test images:
 
-![Example Output](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/VideoRecorder/recorded_fast_yolo11l.avi) <!-- Replace with your actual image -->
+![Example Output](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/VideoRecorder/recorded1.avi)
 
 ---
 
