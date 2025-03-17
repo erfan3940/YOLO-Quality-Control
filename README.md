@@ -79,13 +79,14 @@ The trained model was deployed on a production line simulator using Python and O
 ### Example Output
 Below is an short video example of the model's output on a test images:
 
-![Example Output](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/VideoRecorder/recorded1.avi)
+![download](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/VideoRecorder/recorded1.avi)
 
 ---
 
 ## Usage
 
 ### Prerequisites
+- Environment ![simply create new environment from this yml file](https://github.com/erfan3940/YOLO-Quality-Control/blob/main/YOLO_CUDA.yml)
 - Python 3.10.16
 - Install dependencies:
   ```bash
